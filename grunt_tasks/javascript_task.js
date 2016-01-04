@@ -6,7 +6,6 @@ module.exports = function(grunt) {
             'concat:smartadminjs',
             'concat:libjs',
             'concat:orchestrajs',
-            'concat:mediajs',
             'concat:js'
         ]
     );

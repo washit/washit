@@ -51,6 +51,7 @@ assetic:
     debug:          "%kernel.debug%"
     use_controller: false
     bundles:
+        - OpenOrchestraFrontBundle
         - OpenOrchestraBackofficeBundle
         - OpenOrchestraDisplayBundle
         - OpenOrchestraUserBundle
@@ -80,14 +81,6 @@ swiftmailer:
     host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
-
-snc_redis:
-    clients:
-        default:
-            type: phpredis
-            alias: default
-            dsn: redis://localhost
-            logging: %kernel.debug%
 
 fos_user:
     db_driver: mongodb

@@ -20,6 +20,7 @@ apache_conf:
     docRoot: /var/www/washit/web
     errorLog: admin.washitError.log
     accessLog: admin.washitAccess.log
+    siteId: washit
 
 varnish_listen_port: 6081
 

@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            new Snc\RedisBundle\SncRedisBundle(),
+            new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\UserBundle\FOSUserBundle(),
@@ -47,10 +47,14 @@ class AppKernel extends Kernel
             new OpenOrchestra\LogBundle\OpenOrchestraLogBundle(),
             new OpenOrchestra\UserAdminBundle\OpenOrchestraUserAdminBundle(),
 
+            new OpenOrchestra\ThemeBundle\OpenOrchestraThemeBundle(),
+            new OpenOrchestra\FrontBundle\OpenOrchestraFrontBundle(),
+
             // Need parameters set by some of our bundles
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
             new Solution\MongoAggregationBundle\SolutionMongoAggregationBundle(),
             new OpenOrchestra\ModelLogBundle\OpenOrchestraModelLogBundle(),
+            new Washit\BackofficeBundle\WashitBackofficeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
