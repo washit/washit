@@ -1,0 +1,34 @@
+---
+user_root: vagrant
+
+path_front: /var/www/washit
+
+hosts_localhost: 127.0.0.1 localhost washit
+
+hosts_site: 127.0.1.1 washit.dev
+
+apache_main_ports:
+  - 80
+
+back_ports:
+  - 80
+
+apache_conf:
+  washit.conf:
+    port: 80
+    serverName: wash.dev
+    docRoot: /var/www/washit/web
+    errorLog: admin.washitError.log
+    accessLog: admin.washitAccess.log
+
+varnish_listen_port: 6081
+
+backend_conf:
+  - { name: washit, port: 80, host: admin.washit.dev, admin: true }
+
+selenium_current_directory: /home/vagrant
+
+mail_to: cron@open-orchestra.com
+
+sudoers:
+  - vagrant

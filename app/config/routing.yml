@@ -1,0 +1,41 @@
+open_orchestra_backoffice:
+    resource: "@OpenOrchestraBackofficeBundle/Controller"
+    type: annotation
+    prefix: /admin
+
+open_orchestra_user_admin:
+    resource: "@OpenOrchestraUserAdminBundle/Controller/Admin"
+    type: annotation
+    prefix: /admin
+
+open_orchestra_api_oauth2:
+    resource: "@OpenOrchestraBaseApiBundle/Resources/config/oauth2_routing.yml"
+
+open_orchestra_api:
+    resource: "@OpenOrchestraApiBundle/Controller"
+    type: annotation
+    prefix: /api
+
+open_orchestra_user_api:
+    resource: "@OpenOrchestraUserAdminBundle/Controller/Api"
+    type: annotation
+    prefix: /api
+
+open_orchestra_log:
+    resource: "@OpenOrchestraLogBundle/Controller"
+    type: annotation
+    prefix: /api
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+root:
+    path: /
+    methods: ['GET']
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /admin
+        permanent: true
+
+open_orchestra_base:
+    resource: "@OpenOrchestraBaseBundle/Resources/config/routing.yml"
